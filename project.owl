@@ -1,0 +1,470 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/taxid/ontologies/project#"
+     xml:base="http://www.semanticweb.org/taxid/ontologies/project"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/taxid/ontologies/project"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#hasAffectionInAnatomy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/taxid/ontologies/project#hasAffectionInAnatomy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Disease"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Anatomic_parts"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#hasSymptoms -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/taxid/ontologies/project#hasSymptoms">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Disease"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Symptoms"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#hasTreatment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/taxid/ontologies/project#hasTreatment">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Symptoms"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Treatment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#isAttacking -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/taxid/ontologies/project#isAttacking">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Disease"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Gene"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Alzheimers_disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Alzheimers_disease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Central-Nervous-System-Disease"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#hasSymptoms"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Symptoms"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#isAttacking"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Gene"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#hasAffectionInAnatomy"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Brain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#isAttacking"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#APOE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#isAttacking"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#APP"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#isAttacking"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#PSEN1"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#isAttacking"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#PSEN2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Anatomic_parts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Anatomic_parts">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Disease"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Gene"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Symptoms"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Brain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Brain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Head"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Central-Nervous-System-Disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Central-Nervous-System-Disease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Nervous-System-Disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Confusion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Confusion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Middle-Stage"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Moody"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Sleep-Disordes"/>
+        <rdfs:comment>Confusion about where they are or what day it is</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Difficulty-To-Communicate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Difficulty-To-Communicate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Late-Stage"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Personality-Changes"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Physical-Abilities-Changes"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Vulnerable-To-Infections"/>
+        <rdfs:comment>Individuals lose the ability to respond to their environment, to carry on a conversation and, eventually, to control movement. They may still say words or phrases, but communicating pain becomes difficult.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Disease">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#hasSymptoms"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Symptoms"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Gene"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Symptoms"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Drugs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Drugs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Treatment"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Exercise"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Nutrition"/>
+        <rdfs:comment>Some drugs curb the breakdown of a chemical in the brain, called acetylcholine, that’s important for memory and learning. They may slow down how fast symptoms get worse for about half of people who take them.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Early-Stage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Early-Stage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Symptoms"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Late-Stage"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Middle-Stage"/>
+        <rdfs:comment>In the early stage of Alzheimer&apos;s, a person may function independently. He or she may still drive, work and be part of social activities. Despite this, the person may feel as if he or she is having memory lapses, such as forgetting familiar words or the location of everyday objects.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Exercise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Exercise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Treatment"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Nutrition"/>
+        <rdfs:comment>Activities such as a daily walk can help improve mood and maintain the health of joints, muscles and the heart.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Gene -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Gene">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Symptoms"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Treatment"/>
+        <rdfs:comment>Researchers have found that this form of the disorder can result from mutations in one of three genes: APP, PSEN1, or PSEN2. When any of these genes is altered, large amounts of a toxic protein fragment called amyloid beta peptide are produced in the brain.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Head -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Head">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Anatomic_parts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Hight-calorie_smothies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Hight-calorie_smothies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Nutrition"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Liquids"/>
+        <rdfs:comment>You can supplement milkshakes with protein powders (available at grocery stores, drugstores and discount retailers) or use your blender to make smoothies featuring your favorite ingredients</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Late-Stage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Late-Stage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Symptoms"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Middle-Stage"/>
+        <rdfs:comment>In the final stage of this disease, individuals lose the ability to respond to their environment, to carry on a conversation and, eventually, to control movement. They may still say words or phrases, but communicating pain becomes difficult. As memory and cognitive skills continue to worsen, significant personality changes may take place and individuals need extensive help with daily activities.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Liquids -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Liquids">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Nutrition"/>
+        <rdfs:comment>Try to ensure that a person with Alzheimer&apos;s drinks at least several full glasses of liquids every day.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Middle-Stage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Middle-Stage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Symptoms"/>
+        <rdfs:comment>Moderate Alzheimer&apos;s is typically the longest stage and can last for many years. As the disease progresses, the person with Alzheimer&apos;s will require a greater level of care.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Moody -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Moody">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Middle-Stage"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Sleep-Disordes"/>
+        <rdfs:comment>Feeling moody or withdrawn, especially in socially or mentally challenging situations</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Nervous-System-Disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Nervous-System-Disease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Nutrition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Nutrition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Treatment"/>
+        <rdfs:comment>People with Alzheimer&apos;s may forget to eat, lose interest in preparing meals or not eat a healthy combination of foods. They may also forget to drink enough, leading to dehydration and constipation</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Personality-Changes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Personality-Changes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Late-Stage"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Physical-Abilities-Changes"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Vulnerable-To-Infections"/>
+        <rdfs:comment>As memory and cognitive skills continue to worsen, significant personality changes may take place and individuals need extensive help with daily activities.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Physical-Abilities-Changes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Physical-Abilities-Changes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Late-Stage"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Vulnerable-To-Infections"/>
+        <rdfs:comment>Experience changes in physical abilities, including the ability to walk, sit and, eventually, swallow</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Problems-In-Concetration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Problems-In-Concetration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Early-Stage"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Problems-In-Memory"/>
+        <rdfs:comment>Increasing trouble with planning or organizing</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Problems-In-Memory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Problems-In-Memory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Early-Stage"/>
+        <rdfs:comment>Trouble remembering names or words, forgetting material that one has just read</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Sleep-Disordes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Sleep-Disordes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Middle-Stage"/>
+        <rdfs:comment>Changes in sleep patterns, such as sleeping during the day and becoming restless at night</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Symptoms -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Symptoms">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#hasTreatment"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Treatment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Treatment"/>
+        <rdfs:comment>Alzheimer&apos;s disease typically progresses slowly in three general stages — mild (early-stage), moderate (middle-stage), and severe (late-stage). Since Alzheimer&apos;s affects people in different ways, each person will experience symptoms - or progress through Alzheimer&apos;s stages - differently</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Treatment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Treatment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Vulnerable-To-Infections -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Vulnerable-To-Infections">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Late-Stage"/>
+        <rdfs:comment>Become vulnerable to infections, especially pneumonia</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Walk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Walk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Exercise"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#APOE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/taxid/ontologies/project#APOE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Gene"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#APP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/taxid/ontologies/project#APP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Gene"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#PSEN1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/taxid/ontologies/project#PSEN1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Gene"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#PSEN2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/taxid/ontologies/project#PSEN2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Gene"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Donepezil_(Aricept) -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Donepezil_(Aricept)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Drugs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Galantamine_(Razadyne) -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Galantamine_(Razadyne)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Drugs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Memantine_(Namenda) -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Memantine_(Namenda)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Drugs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/taxid/ontologies/project#Rivastigmine_(Exelon) -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/taxid/ontologies/project#Rivastigmine_(Exelon)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/taxid/ontologies/project#Drugs"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
